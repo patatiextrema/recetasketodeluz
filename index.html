@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ff8fab">
+  <meta name="description" content="Delights Recipes — recetas keto bonitas, fáciles y llenas de color.">
+  <title>Delights Recipes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <img class="corner-flower corner-flower--tl" src="assets/flower-corner.svg" alt="" aria-hidden="true">
+  <img class="corner-flower corner-flower--br" src="assets/flower-corner.svg" alt="" aria-hidden="true">
+
+  <header class="site-header">
+    <a class="brand" href="#top"><span class="brand__spark">✿</span><span>Delights Recipes</span></a>
+    <nav class="nav">
+      <a href="#recipes">Recetas</a>
+      <a href="#about">Sobre Delights</a>
+      <button class="icon-button" id="themeButton" type="button" aria-label="Cambiar tema">☼</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero__glow hero__glow--one"></div>
+      <div class="hero__glow hero__glow--two"></div>
+      <div class="hero__content">
+        <p class="eyebrow">KETO • SWEET • COLORFUL</p>
+        <h1>Postres keto que se ven tan lindos como saben.</h1>
+        <p class="hero__text">Recetas dulces, fluffy y bonitas para guardar, repetir y compartir.</p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#recipes">Ver recetas</a>
+          <button class="button button--ghost" id="surpriseButton" type="button">Sorpréndeme ✨</button>
+        </div>
+      </div>
+      <div class="hero__art" aria-hidden="true">
+        <div class="cake-blob">
+          <div class="cake-blob__mini">♡</div>
+          <div class="cake-blob__title">sweet<br>little<br>things</div>
+          <div class="cake-blob__flowers">✿ ❀ ✿</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="marquee">
+      <div class="marquee__track">
+        <span>fluffy</span><span>✿</span><span>keto</span><span>♡</span>
+        <span>cozy baking</span><span>✦</span><span>low carb</span><span>❀</span>
+        <span>cream cheese</span><span>✿</span><span>fluffy</span><span>♡</span>
+        <span>keto</span><span>✦</span><span>cozy baking</span><span>❀</span>
+      </div>
+    </section>
+
+    <section class="recipes-section" id="recipes">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">MY RECIPE BOX</p>
+          <h2>Tres favoritas para empezar</h2>
+        </div>
+        <label class="search"><span>⌕</span><input id="recipeSearch" type="search" placeholder="Buscar receta..." autocomplete="off"></label>
+      </div>
+
+      <div class="recipe-grid" id="recipeGrid">
+        <article class="recipe-card" data-title="cinnamon rolls keto canela pumpkin">
+          <button class="favorite" type="button" aria-label="Guardar Cinnamon Rolls Keto" data-favorite="cinnamon">♡</button>
+          <div class="recipe-card__image recipe-card__image--cinnamon"><span class="photo-label">Tu foto aquí</span></div>
+          <div class="recipe-card__body">
+            <div class="recipe-meta"><span>Fluffy</span><span>5–6 rolls</span></div>
+            <h3>Cinnamon Rolls Keto</h3>
+            <p>Suaves, infladitos y con centro de canela. Hechos con King Arthur Keto Wheat Flour.</p>
+            <button class="text-link open-recipe" type="button" data-recipe="cinnamon">Ver receta <span>→</span></button>
+          </div>
+        </article>
+
+        <article class="recipe-card" data-title="donuts keto rellenas vainilla pistacho bomboloni">
+          <button class="favorite" type="button" aria-label="Guardar Donuts Keto" data-favorite="donuts">♡</button>
+          <div class="recipe-card__image recipe-card__image--donuts"><span class="photo-label">Tu foto aquí</span></div>
+          <div class="recipe-card__body">
+            <div class="recipe-meta"><span>Rellenables</span><span>8–10 donuts</span></div>
+            <h3>Donuts Keto Rellenas</h3>
+            <p>Tipo bomboloni: suaves, aireadas y perfectas para crema de vainilla o pistacho.</p>
+            <button class="text-link open-recipe" type="button" data-recipe="donuts">Ver receta <span>→</span></button>
+          </div>
+        </article>
+
+        <article class="recipe-card" data-title="pumpkin cake keto calabaza almond flour moist">
+          <button class="favorite" type="button" aria-label="Guardar Pumpkin Cake Keto" data-favorite="pumpkin">♡</button>
+          <div class="recipe-card__image recipe-card__image--pumpkin"><span class="photo-label">Tu foto aquí</span></div>
+          <div class="recipe-card__body">
+            <div class="recipe-meta"><span>Moist</span><span>9×13</span></div>
+            <h3>Pumpkin Cake Keto</h3>
+            <p>Húmedo, especiado y perfecto con cream cheese frosting.</p>
+            <button class="text-link open-recipe" type="button" data-recipe="pumpkin">Ver receta <span>→</span></button>
+          </div>
+        </article>
+      </div>
+      <p class="empty-state" id="emptyState" hidden>No encontré una receta con ese nombre 🌷</p>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about__flower" aria-hidden="true">❀</div>
+      <div>
+        <p class="eyebrow">ABOUT DELIGHTS</p>
+        <h2>Un pequeño recetario para cosas dulces.</h2>
+      </div>
+      <p>Delights Recipes es una colección personal de postres keto con textura real: panes fluffy, bizcochos moist y rellenos cremosos. La idea es ir agregando recetas, fotos y notas cada vez que una versión quede especialmente buena.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Made with ♡, flowers & a little bit of almond flour.</p>
+    <a href="#top">Volver arriba ↑</a>
+  </footer>
+
+  <dialog class="recipe-modal" id="recipeModal">
+    <div class="modal-shell">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Cerrar receta">×</button>
+      <div class="modal-hero">
+        <p class="eyebrow" id="modalEyebrow"></p>
+        <h2 id="modalTitle"></h2>
+        <p id="modalIntro"></p>
+      </div>
+      <div class="modal-content">
+        <section><h3>Ingredientes</h3><ul id="modalIngredients"></ul></section>
+        <section><h3>Preparación</h3><ol id="modalSteps"></ol></section>
+        <aside class="recipe-tip"><span>✿ tip</span><p id="modalTip"></p></aside>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
